@@ -5,7 +5,7 @@
         "lightBgColor": "#f8f9fa",
         "textColor": "#ffffff",
         "resume_url": "resume-data.json",
-        "download_resume": "resume.pdf",
+        "download_resume": "https://AbhilashPoshanagari.github.io/my_Profile/resume.pdf",
         "rename_rename": "Abhilash_Poshanagari.pdf",
         "settings": true,
         "hasBackgroundImage": false,
