@@ -1,0 +1,186 @@
+{
+  "name": "Abhilash Poshanagari",
+  "title": "Software Engineer | Aspiring Data Scientist",
+  "email": "abhi.sree762@gmail.com",
+  "phone": "9494940326",
+  "location": "Telangana, India",
+  "profilePic": "profile_pic.jfif",
+  "tags": ["Ionic", "Angular", "ML", "Big data", "Neural Networks"],
+  "about": "I am a passionate Data Scientist with over 4 years of experience in Angular and Ionic development, now transitioning into AI and Data Science. I recently completed a one-year Post Graduate program in AI and Data Science from IISc Bangalore and NSE TalentSprint, where I gained strong foundations in probability, statistics, linear algebra, and calculus, along with practical experience in machine learning, deep learning, generative AI, and scalable AI systems. My training also included data engineering with Apache Spark and business analytics. With a unique blend of software engineering expertise and data-driven problem-solving skills, I am eager to apply advanced analytics and AI techniques to real-world challenges and drive data-informed decision-making.",
+  "skills": [ 
+    {
+    "category": "Programming Languages",
+    "skill" : [
+        {
+          "name": "JavaScript",
+          "rating": 4
+        },
+        {
+          "name": "TypeScript",
+          "rating": 4
+        },
+        {
+          "name": "Python",
+          "rating": 3
+        }
+    ]
+  },
+  {
+    "category": "Machine Learning",
+    "skill" : [
+        {
+          "name": "Tensorflow",
+          "rating": 3
+        },
+        {
+          "name": "Neural Networks",
+          "rating": 3
+        },
+        {
+          "name": "LLMs",
+          "rating": 3
+        },
+        {
+          "name":"NLP", 
+          "rating": 2      
+        }
+    ]
+  },
+  {
+    "category": "Framworks",
+    "skill" : [
+        {
+          "name": "Ionic",
+          "rating": 4
+        },
+        {
+          "name": "Angular",
+          "rating": 4
+        },
+        {
+          "name": "NodeJs",
+          "rating": 3
+        },
+        {
+          "name": "FastAPI",
+          "rating": 3
+        }
+    ]
+  }
+  ],
+  "experience": [
+    {
+      "company_name": "TRC companies Inc.",
+      "web_site": "https://www.trccompanies.com",
+      "duriation": "2021 August - Present",
+      "projects": [
+        {
+          "title":"AG & P, Quality construction management (CR)",
+          "dateRange":"2023",
+          "description":"Quality construction management change request (CR). Quality construction management is a gas pipeline construction with accurate geo-location by using arrow devise which we can connect throw the Bluetooth. This application will monitor the construction activities. And operational management.",
+          "technologies":["Ionic", "Angular"]
+        },
+        {
+          "title": "Thing Gas, Customer capturing application",
+          "dateRange": "2022",
+          "description": "Customer capturing application will collects data from gas consumer like new gas connections, repair and replace gas accessories. And admins will monitor the gas works and generate reports.",
+          "technologies": ["Ionic", "Angular"]
+        },
+        {
+          "title": "Think Gas Quality Construction Management",
+          "dateRange": "2022-2023",
+          "description": "Designed and developed a mobile application for digital construction data collection integrated with geographic information system (GIS) capabilities. field users to accurately capture asset data using the Arraw 100 GNSS device, ensuring high-precision geolocation.",
+          "technologies": ["Ionic", "Angular"]
+        },
+        {
+          "title": "Tata Power DynamicForm-FieldOn",
+          "dateRange": "2021-2022",
+          "description": "Tata power dynamic forms is an application for digital data collection and analysis in a simple and intelligent way. A true enterprise solution, Tata power dynamic forms will collect the data from Field users throw mobile and admins will validate users’ data and generates a report for organization.",
+          "technologies": ["Ionic", "Angular"]
+        }
+      ]
+    },
+    {
+    "company_name": "Trans Global Geomatics pvt.",
+    "web_site": "https://www.transglobalgeomatics.com",
+     "duriation": "2020 January - 2021 August",
+    "projects": [
+      {
+          "title": "Markfed GPS Tracker",
+          "dateRange": "2020",
+          "description": "MARKFED is a Govt Organization that procures paddy from farmers. Farmers bring the paddy to the procurement centers (PC) to deposit paddy. Once the paddy is deposited at PC (procurement centers), Govt authorized transporters will transfer the paddy from PC to Storage centers (SC). The vehicles fitted with GPS Trackers will be monitored using this application.",
+          "technologies": ["Ionic", "Angular", "NodeJs"]
+        },
+      {
+          "title": "Dost",
+          "dateRange": "2020",
+          "description": "We designed a Hybrid mobile app for ecommerce. In this App User skills will be posted like Electricians who do electrical work and clients can get the service easily. features login with google login with facebook and location service.",
+          "technologies": ["Ionic", "Angular", "NodeJs"]
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Stock Screener",
+      "dateRange": "2025",
+      "description": "Stock Screener is an agentic AI system designed to generate practical, real-world stock recommendations for Indian equities. What began as a time series prediction project evolved into an insight-driven, agent-based intelligence platform that synthesizes macroeconomic, sectoral, and technical analysis to deliver interpretable outputs like investment recommendations, risk summaries, and directional outlooks.",
+      "technologies": ["Generative AI", "LSTM", "ARIMA"]
+    }
+  ],
+  "certifications": [
+    {
+    "title": "Introduction to Data Science",
+    "link": "https://coursera.org/share/0f40b2d36f285975abb88168df708075"
+  },
+  {
+    "title":"Python for Data Science and AI",
+    "link": "https://coursera.org/share/513284f81a5573fb97a3bb7e44e6bd55"
+  },
+  {
+    "title":"Data Analysis with Python",
+    "link": "https://coursera.org/share/a76689c6e1e8f745e2e92ca9845452fd"
+  },
+  {
+    "title":"Data Visualization with Python",
+    "link": "https://coursera.org/share/1c7d90eb1cf9a0387440e706de21353a"
+  },
+  {
+    "title":"Machine Learning with Python",
+    "link": "https://coursera.org/share/b9a668f07d5cd39fc7f3b26b6d2d30a6"
+  }
+],
+  "portfolio": [
+    {
+      "label": "TensorFlow Model Showcase",
+      "url": "https://abhilashposhanagari.github.io/tensorFlowModels"
+    },
+    {
+      "label": "Image Classification Demo",
+      "url": "https://abhilashposhanagari.github.io/imageClassification"
+    },
+    {
+      "label": "Stock Screener",
+      "url": "https://abhilashposhanagari.github.io/Causal_Alpha_Stock_Screener_Agentic_AI"
+    }
+  ],
+  "education": [
+    {
+      "degree": "PG Certificate in Computational Data Science",
+      "institute": "IISc & NSE TalentSprint",
+      "year": "2025"
+    },
+    {
+      "degree": "PG Diploma in Electronic Product Design",
+      "institute": "CDAC Hyderabad",
+      "year": "2016"
+    },
+    {
+      "degree": "B.Tech in EEE",
+      "institute": "JNTU Hyderabad",
+      "year": "2015"
+    }
+  ],
+  "github": "https://github.com/AbhilashPoshanagari",
+  "linkedin": "https://www.linkedin.com/in/abhilash-poshanagari-28a0a1123"
+}
