@@ -10,7 +10,7 @@
         "resume_url": "resume-data.json",
         "download_resume": "resume.pdf",
         "rename_rename": "Abhilash_Poshanagari.pdf",
-        "customSettingURL": "http://localhost:4200/default_settings_21.json",
+        "customSettingURL": "https://AbhilashPoshanagari.github.io/my_Profile/default_settings_21.json",
         "settings": true,
         "hasBackgroundImage": false,
         "toolbarBackgroundImage": "",
