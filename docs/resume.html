@@ -1,0 +1,400 @@
+
+<!-- Toolbar with dynamic background -->
+ <app-header 
+  [toolbarBackgroundImage]="toolbarBackgroundImage"
+  [hasBackgroundImage]="hasBackgroundImage"
+  [rename_resume]="rename_resume"
+  [download_resume]="download_resume"
+  [download_status]="download_status"
+  [default_setting_url]="custome_settings_url?custome_settings_url:default_setting_url"
+  [textColor]="textColor"
+  [settings]="settings"
+  [showThemeControls]="showThemeControls"
+  [primaryColor]="primaryColor"
+  [accentColor]="accentColor"
+  [lightBgColor]="lightBgColor"
+  [resume_url]="resume_url"
+  [data]="toolbar_data"
+  [subTitleColor]="subTitleColor"
+  [titleColor]="titleColor"
+  [iconColor]="iconColor"
+  (getDefaultSettings)="getDefaultValues($event)"
+  (accentColorOutput)="updateAccentColor($event)"
+  (titleColorOutput)="updateTitleColor($event)"
+  (subTitleColorOutput)="updateSubTitleColor($event)"
+  (iconColorOutput)="updateIconColor($event)">
+</app-header>
+
+<!-- Rest of your resume content -->
+<div class="container my-5" [ngStyle]="{ '--primary-color': primaryColor, '--accent-color': accentColor, '--light-bg': lightBgColor }" >
+  <!-- Two Column Layout -->
+  <div class="row">
+    <!-- Left Column -->
+    <div class="col-lg-8 pe-lg-4">
+
+  <div *ngFor="let left of leftSectionBlocks">
+      <div *ngIf="left.type === 'aboutme'">
+              <!-- About -->
+        <div class="card mb-4 border-0 shadow-sm animate-in" *ngIf="data.aboutme">
+            <div class="card-body">
+              <h2 class="h5 fw-bold mb-3 d-flex align-items-center" [ngStyle]="{'color': titleColor}">
+                <i class="fas fa-user me-2" [ngStyle]="{'color': iconColor}"></i>{{left.title}}
+              </h2>
+              <p class="mb-0 start-line-space">{{ data.aboutme }}</p>
+            </div>
+          </div>
+      </div>
+
+      <div *ngIf="left.type === 'projects'">
+      <!-- Projects -->
+      <div class="card mb-4 border-0 shadow-sm animate-in" *ngIf="left.data && left.data">
+        <div class="card-body">
+          <h2 class="h5 fw-bold mb-3 d-flex align-items-center" [ngStyle]="{'color': titleColor}">
+            <i class="fas fa-project-diagram me-2" [ngStyle]="{'color': iconColor}"></i>{{left.title}}
+          </h2>
+          <div class="timeline">
+            <div *ngFor="let project of left.data" class="timeline-item mb-4">
+              <div class="timeline-badge" [ngStyle]="{'background-color': primaryColor}"></div>
+              <div class="timeline-content p-3" style="background-color: var(--light-bg); border-radius: 8px;">
+                <h3 class="h6 fw-bold mb-1">{{ project.title }}</h3>
+                <p class="text-muted small mb-2">{{ project.dateRange }}</p>
+                <p class="mb-2 project-description">{{ project.description }}</p>
+                <div *ngIf="project.technologies" class="mt-2">
+                  <span *ngFor="let tech of project.technologies" class="badge bg-secondary me-1 mb-1">{{ tech }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <div *ngIf="left.type === 'experience'">
+            <!-- Experience -->
+      <div class="card mb-4 border-0 shadow-sm animate-in" *ngIf="left.data && left.data">
+        <div class="card-body">
+          <h2 class="h5 fw-bold mb-3 d-flex align-items-center" [ngStyle]="{'color': titleColor}">
+            <i class="fas fa-project-diagram me-2" [ngStyle]="{'color': iconColor}"></i> {{left.title}}
+          </h2>
+          <div class="timeline" *ngIf="left.data && left.data.length > 0">
+            <div *ngFor="let company of left.data">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <a [href]="company.web_site" target="_blank" class="d-flex align-items-center" style="border: none; padding: 0.75rem 0;">
+              <!-- <span class="me-3">{{ link.title }}</span> -->
+              <span class="h6 fw-bold mb-0 me-2" [ngStyle]="{'color': subTitleColor}">{{ company.company_name }}</span>
+              <i class="fas fa-external-link-alt" [ngStyle]="{'color': accentColor}"></i>
+            </a>
+              <span class="fw-bold text-muted small" [ngStyle]="{'color': subTitleColor}">{{ company.duriation }}</span>
+            </div>
+            <div *ngFor="let project of company.projects" class="timeline-item mb-4">
+              <div class="card mb-4 border-0 shadow-sm">
+                <div class="card-body">
+              <div class="timeline-badge" [ngStyle]="{'background-color': primaryColor}"></div>
+              <div class="timeline-content p-3" style="background-color: var(--light-bg); border-radius: 8px;">
+                <h3 class="h6 fw-bold mb-1">{{ project.title }}</h3>
+                <p class="text-muted small mb-2">{{ project.dateRange }}</p>
+                <p class="mb-2 project-description">{{ project.description }}</p>
+                <div *ngIf="project.technologies" class="mt-2">
+                  <span *ngFor="let tech of project.technologies" class="badge bg-secondary me-1 mb-1">{{ tech }}</span>
+                </div>
+              </div>
+              </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="left.layout === 'skills'">
+        <!-- Skills -->
+              <div class="card mb-4 border-0 shadow-sm animate-in" *ngIf="left.data">
+                <div class="card-body">
+                  <h2 class="h5 fw-bold mb-3 d-flex align-items-center" [ngStyle]="{'color': titleColor}">
+                    <i class="fas fa-tools me-2" [ngStyle]="{'color': iconColor}"></i>{{ left.title }}
+                  </h2>
+                      <div *ngFor="let skillCategory of left.data">
+                        <h3 class="h6 fw-bold mb-2" [ngStyle]="{'color': subTitleColor}">{{ skillCategory.category }}</h3>
+                      <div class="card mb-4 border-0 shadow-sm animate-in">
+                        <div class="card-body">
+                        <div *ngFor="let skill of skillCategory.skill" class="slider-container">
+                            <label>{{ skill.name }}</label>
+                            <mat-slider
+                              class="addleftspace"
+                              disabled="true"
+                              min="0"
+                              max="5"
+                              step="1"
+                              showTickMarks="false"
+                              discrete="false"
+                              [ngStyle]="{'color': accentColor}"
+                            >
+                          <input matSliderThumb [(ngModel)]="skill.rating" #slider>
+                            </mat-slider>
+                        <mat-chip class="chip-right">
+                          {{ skill.rating }}
+                        </mat-chip>
+                          </div>
+                        </div>
+                      
+                        </div>
+                      </div>
+                      
+                    <!-- </div> -->
+                  <!-- </div> -->
+                </div>
+              </div>
+        </div>
+
+        <div *ngIf="left.layout === 'certifications'">
+          <!-- Certifications -->
+          <div class="card mb-4 border-0 shadow-sm animate-in" *ngIf="left.data">
+            <div class="card-body">
+              <h2 class="h5 fw-bold mb-3 d-flex align-items-center" [ngStyle]="{'color': titleColor}">
+                <i class="fas fa-link me-2" [ngStyle]="{'color': iconColor}"></i> {{ left.title }}
+              </h2>
+              <div class="list-group list-group-flush">
+                <a *ngFor="let link of left.data" [href]="link.link" target="_blank" class="list-group-item list-group-item-action d-flex align-items-center" style="border: none; padding: 0.75rem 0;">
+                  <span class="me-3">{{ link.title }}</span>
+                  <i class="fas fa-external-link-alt me-3" [ngStyle]="{'color': accentColor}"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div *ngIf="left.layout === 'portfolio'">
+          <!-- Portfolio -->
+          <div class="card mb-4 border-0 shadow-sm animate-in" *ngIf="left.data">
+            <div class="card-body">
+              <h2 class="h5 fw-bold mb-3 d-flex align-items-center" [ngStyle]="{'color': titleColor}">
+                <i class="fas fa-link me-2" [ngStyle]="{'color': iconColor}"></i>{{ left.title }}
+              </h2>
+              <div class="list-group list-group-flush">
+                <a *ngFor="let link of left.data" [href]="link.link" target="_blank" class="list-group-item list-group-item-action d-flex align-items-center" style="border: none; padding: 0.75rem 0;">
+                  <i class="fas fa-external-link-alt me-3" [ngStyle]="{'color': accentColor}"></i>
+                  <span>{{ link.title }}</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div *ngIf="left.layout === 'education'">
+          <!-- Education -->
+          <div class="card mb-4 border-0 shadow-sm animate-in" *ngIf="left.data">
+            <div class="card-body">
+              <h2 class="h5 fw-bold mb-3 d-flex align-items-center" [ngStyle]="{'color': titleColor}">
+                <i class="fas fa-graduation-cap me-2" [ngStyle]="{'color': iconColor}"></i>{{ left.title }}
+              </h2>
+              <div class="timeline">
+                <div *ngFor="let edu of left.data" class="timeline-item mb-3">
+                  <div class="timeline-badge" [ngStyle]="{'background-color': primaryColor}"></div>
+                  <div class="timeline-content">
+                    <h3 class="h6 fw-bold mb-0">{{ edu.degree }}</h3>
+                    <p class="text-muted small mb-1">{{ edu.institute }}</p>
+                    <p class="text-muted small">{{ edu.year }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Right Column -->
+    <div class="col-lg-4 ps-lg-4">
+
+      <div *ngFor="let right of rightSectionBlocks">
+        <div *ngIf="right.layout === 'skills'">
+        <!-- Skills -->
+              <div class="card mb-4 border-0 shadow-sm animate-in" *ngIf="right.data">
+                <div class="card-body">
+                  <h2 class="h5 fw-bold mb-3 d-flex align-items-center" [ngStyle]="{'color': titleColor}">
+                    <i class="fas fa-tools me-2" [ngStyle]="{'color': iconColor}"></i>{{ right.title }}
+                  </h2>
+                      <div *ngFor="let skillCategory of right.data">
+                        <h3 class="h6 fw-bold mb-2" [ngStyle]="{'color': subTitleColor}">{{ skillCategory.category }}</h3>
+                      <div class="card mb-4 border-0 shadow-sm animate-in">
+                        <div class="card-body">
+                        <div *ngFor="let skill of skillCategory.skill" class="slider-container">
+                            <label>{{ skill.name }}</label>
+                            <mat-slider
+                              class="addleftspace"
+                              disabled="true"
+                              min="0"
+                              max="5"
+                              step="1"
+                              showTickMarks="false"
+                              discrete="false"
+                              [ngStyle]="{'color': accentColor}"
+                            >
+                          <input matSliderThumb [(ngModel)]="skill.rating" #slider>
+                            </mat-slider>
+                        <mat-chip class="chip-right">
+                          {{ skill.rating }}
+                        </mat-chip>
+                          </div>
+                        </div>
+                      
+                        </div>
+                      </div>
+                      
+                    <!-- </div> -->
+                  <!-- </div> -->
+                </div>
+              </div>
+        </div>
+
+        <div *ngIf="right.layout === 'certifications'">
+          <!-- Certifications -->
+          <div class="card mb-4 border-0 shadow-sm animate-in" *ngIf="right.data">
+            <div class="card-body">
+              <h2 class="h5 fw-bold mb-3 d-flex align-items-center" [ngStyle]="{'color': titleColor}">
+                <i class="fas fa-link me-2" [ngStyle]="{'color': iconColor}"></i> {{ right.title }}
+              </h2>
+              <div class="list-group list-group-flush">
+                <a *ngFor="let link of right.data" [href]="link.link" target="_blank" class="list-group-item list-group-item-action d-flex align-items-center" style="border: none; padding: 0.75rem 0;">
+                  <span class="me-3">{{ link.title }}</span>
+                  <i class="fas fa-external-link-alt me-3" [ngStyle]="{'color': accentColor}"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div *ngIf="right.layout === 'portfolio'">
+          <!-- Portfolio -->
+          <div class="card mb-4 border-0 shadow-sm animate-in" *ngIf="right.data">
+            <div class="card-body">
+              <h2 class="h5 fw-bold mb-3 d-flex align-items-center" [ngStyle]="{'color': titleColor}">
+                <i class="fas fa-link me-2" [ngStyle]="{'color': iconColor}"></i>{{ right.title }}
+              </h2>
+              <div class="list-group list-group-flush">
+                <a *ngFor="let link of right.data" [href]="link.link" target="_blank" class="list-group-item list-group-item-action d-flex align-items-center" style="border: none; padding: 0.75rem 0;">
+                  <i class="fas fa-external-link-alt me-3" [ngStyle]="{'color': accentColor}"></i>
+                  <span>{{ link.title }}</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div *ngIf="right.layout === 'education'">
+          <!-- Education -->
+          <div class="card mb-4 border-0 shadow-sm animate-in" *ngIf="right.data">
+            <div class="card-body">
+              <h2 class="h5 fw-bold mb-3 d-flex align-items-center" [ngStyle]="{'color': titleColor}">
+                <i class="fas fa-graduation-cap me-2" [ngStyle]="{'color': iconColor}"></i>{{ right.title }}
+              </h2>
+              <div class="timeline">
+                <div *ngFor="let edu of right.data" class="timeline-item mb-3">
+                  <div class="timeline-badge" [ngStyle]="{'background-color': primaryColor}"></div>
+                  <div class="timeline-content">
+                    <h3 class="h6 fw-bold mb-0">{{ edu.degree }}</h3>
+                    <p class="text-muted small mb-1">{{ edu.institute }}</p>
+                    <p class="text-muted small">{{ edu.year }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+          <div *ngIf="right.type === 'aboutme'">
+              <!-- About -->
+        <div class="card mb-4 border-0 shadow-sm animate-in" *ngIf="data.aboutme">
+            <div class="card-body">
+              <h2 class="h5 fw-bold mb-3 d-flex align-items-center" [ngStyle]="{'color': titleColor}">
+                <i class="fas fa-user me-2" [ngStyle]="{'color': iconColor}"></i>{{right.title}}
+              </h2>
+              <p class="mb-0 start-line-space">{{ data.aboutme }}</p>
+            </div>
+          </div>
+      </div>
+
+      <div *ngIf="right.type === 'projects'">
+      <!-- Projects -->
+      <div class="card mb-4 border-0 shadow-sm animate-in" *ngIf="right.data && right.data">
+        <div class="card-body">
+          <h2 class="h5 fw-bold mb-3 d-flex align-items-center" [ngStyle]="{'color': titleColor}">
+            <i class="fas fa-project-diagram me-2" [ngStyle]="{'color': iconColor}"></i>{{right.title}}
+          </h2>
+          <div class="timeline">
+            <div *ngFor="let project of right.data" class="timeline-item mb-4">
+              <div class="timeline-badge" [ngStyle]="{'background-color': primaryColor}"></div>
+              <div class="timeline-content p-3" style="background-color: var(--light-bg); border-radius: 8px;">
+                <h3 class="h6 fw-bold mb-1">{{ project.title }}</h3>
+                <p class="text-muted small mb-2">{{ project.dateRange }}</p>
+                <p class="mb-2 project-description">{{ project.description }}</p>
+                <div *ngIf="project.technologies" class="mt-2">
+                  <span *ngFor="let tech of project.technologies" class="badge bg-secondary me-1 mb-1">{{ tech }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <div *ngIf="right.type === 'experience'">
+            <!-- Experience -->
+      <div class="card mb-4 border-0 shadow-sm animate-in" *ngIf="right.data && right.data">
+        <div class="card-body">
+          <h2 class="h5 fw-bold mb-3 d-flex align-items-center" [ngStyle]="{'color': titleColor}">
+            <i class="fas fa-project-diagram me-2" [ngStyle]="{'color': iconColor}"></i> {{right.title}}
+          </h2>
+          <div class="timeline" *ngIf="right.data && right.data.length > 0">
+            <div *ngFor="let company of right.data">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <a [href]="company.web_site" target="_blank" class="d-flex align-items-center" style="border: none; padding: 0.75rem 0;">
+              <!-- <span class="me-3">{{ link.title }}</span> -->
+              <span class="h6 fw-bold mb-0 me-2" [ngStyle]="{'color': subTitleColor}">{{ company.company_name }}</span>
+              <i class="fas fa-external-link-alt" [ngStyle]="{'color': accentColor}"></i>
+            </a>
+              <span class="fw-bold text-muted small" [ngStyle]="{'color': subTitleColor}">{{ company.duriation }}</span>
+            </div>
+            <div *ngFor="let project of company.projects" class="timeline-item mb-4">
+              <div class="card mb-4 border-0 shadow-sm">
+                <div class="card-body">
+              <div class="timeline-badge" [ngStyle]="{'background-color': primaryColor}"></div>
+              <div class="timeline-content p-3" style="background-color: var(--light-bg); border-radius: 8px;">
+                <h3 class="h6 fw-bold mb-1">{{ project.title }}</h3>
+                <p class="text-muted small mb-2">{{ project.dateRange }}</p>
+                <p class="mb-2 project-description">{{ project.description }}</p>
+                <div *ngIf="project.technologies" class="mt-2">
+                  <span *ngFor="let tech of project.technologies" class="badge bg-secondary me-1 mb-1">{{ tech }}</span>
+                </div>
+              </div>
+              </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center text-muted small mt-5 pt-4 border-top">
+    <div class="d-flex justify-content-center mb-3">
+      <a *ngIf="data.github" [href]="data.github" class="text-decoration-none mx-3" target="_blank" [ngStyle]="{'color': iconColor}">
+        <i class="fab fa-github fa-lg"></i>
+      </a>
+      <a *ngIf="data.linkedin" [href]="data.linkedin" class="text-decoration-none mx-3" target="_blank" [ngStyle]="{'color': iconColor}">
+        <i class="fab fa-linkedin fa-lg"></i>
+      </a>
+      <a *ngIf="data.website" [href]="data.website" class="text-decoration-none mx-3" target="_blank" [ngStyle]="{'color': iconColor}">
+        <i class="fas fa-globe fa-lg"></i>
+      </a>
+    </div>
+    &copy; 2025 {{ data.name }} · All rights reserved
+  </footer>
+</div>

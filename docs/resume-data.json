@@ -6,7 +6,7 @@
   "location": "Telangana, India",
   "profilePic": "profile_pic.jfif",
   "tags": ["Ionic", "Angular", "ML", "Big data", "Neural Networks"],
-  "about": "I am a passionate Data Scientist with over 4 years of experience in Angular and Ionic development, now transitioning into AI and Data Science. I recently completed a one-year Post Graduate program in AI and Data Science from IISc Bangalore and NSE TalentSprint, where I gained strong foundations in probability, statistics, linear algebra, and calculus, along with practical experience in machine learning, deep learning, generative AI, and scalable AI systems. My training also included data engineering with Apache Spark and business analytics. With a unique blend of software engineering expertise and data-driven problem-solving skills, I am eager to apply advanced analytics and AI techniques to real-world challenges and drive data-informed decision-making.",
+  "aboutme": "I am a passionate Data Scientist with over 4 years of experience in Angular and Ionic development, now transitioning into AI and Data Science. I recently completed a one-year Post Graduate program in AI and Data Science from IISc Bangalore and NSE TalentSprint, where I gained strong foundations in probability, statistics, linear algebra, and calculus, along with practical experience in machine learning, deep learning, generative AI, and scalable AI systems. My training also included data engineering with Apache Spark and business analytics. With a unique blend of software engineering expertise and data-driven problem-solving skills, I am eager to apply advanced analytics and AI techniques to real-world challenges and drive data-informed decision-making.",
   "skills": [ 
     {
     "category": "Programming Languages",
@@ -152,16 +152,16 @@
 ],
   "portfolio": [
     {
-      "label": "TensorFlow Model Showcase",
-      "url": "https://abhilashposhanagari.github.io/tensorFlowModels"
+      "title": "TensorFlow Model Showcase",
+      "link": "https://abhilashposhanagari.github.io/tensorFlowModels"
     },
     {
-      "label": "Image Classification Demo",
-      "url": "https://abhilashposhanagari.github.io/imageClassification"
+      "title": "Image Classification Demo",
+      "link": "https://abhilashposhanagari.github.io/imageClassification"
     },
     {
-      "label": "Stock Screener",
-      "url": "https://abhilashposhanagari.github.io/Causal_Alpha_Stock_Screener_Agentic_AI"
+      "title": "Stock Screener",
+      "link": "https://abhilashposhanagari.github.io/Causal_Alpha_Stock_Screener_Agentic_AI"
     }
   ],
   "education": [
