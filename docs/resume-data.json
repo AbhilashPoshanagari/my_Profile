@@ -134,7 +134,7 @@
     {
       "title": "AI powered chatbot",
       "dateRange": "2025",
-      "description": "Developed an interactive portfolio chatbot that leverages OpenAI's tool-calling API for structured, function-driven interactions. Integrated the Model Context Protocol (MCP) to dynamically connect the AI to external tools and data sources, significantly expanding its capabilities beyond standard chat. Engineered a robust client-server architecture featuring individual tool testing, handling of elicitation requests ("human-in-the-loop"), and a live notification system with progress indicators for long-running tasks.",
+      "description": "Developed an interactive portfolio chatbot that leverages OpenAI's tool-calling API for structured, function-driven interactions. Integrated the Model Context Protocol (MCP) to dynamically connect the AI to external tools and data sources, significantly expanding its capabilities beyond standard chat. Engineered a robust client-server architecture featuring individual tool testing, handling of elicitation requests ('human-in-the-loop'), and a live notification system with progress indicators for long-running tasks.",
       "technologies": ["Angular", "NodeJS", "Lang Chain", "MCP"]
     }
   ],
@@ -199,5 +199,6 @@
   "linkedin": "https://www.linkedin.com/in/abhilash-poshanagari-28a0a1123",
   "website": "https://AbhilashPoshanagari.github.io/my_Profile"
 }
+
 
 
