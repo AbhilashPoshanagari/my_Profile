@@ -22,7 +22,11 @@
         {
           "name": "Python",
           "rating": 3
-        }
+        },
+      {
+        "name": "C++",
+        "rating": 3
+      }
     ]
   },
   {
@@ -126,6 +130,12 @@
       "dateRange": "2025",
       "description": "Stock Screener is an agentic AI system designed to generate practical, real-world stock recommendations for Indian equities. What began as a time series prediction project evolved into an insight-driven, agent-based intelligence platform that synthesizes macroeconomic, sectoral, and technical analysis to deliver interpretable outputs like investment recommendations, risk summaries, and directional outlooks.",
       "technologies": ["Generative AI", "LSTM", "ARIMA"]
+    },
+    {
+      "title": "AI powered chatbot",
+      "dateRange": "2025",
+      "description": "Developed an interactive portfolio chatbot that leverages OpenAI's tool-calling API for structured, function-driven interactions. Integrated the Model Context Protocol (MCP) to dynamically connect the AI to external tools and data sources, significantly expanding its capabilities beyond standard chat. Engineered a robust client-server architecture featuring individual tool testing, handling of elicitation requests ("human-in-the-loop"), and a live notification system with progress indicators for long-running tasks.",
+      "technologies": ["Angular", "NodeJS", "Lang Chain", "MCP"]
     }
   ],
   "certifications": [
@@ -185,3 +195,4 @@
   "linkedin": "https://www.linkedin.com/in/abhilash-poshanagari-28a0a1123",
   "website": "https://AbhilashPoshanagari.github.io/my_Profile"
 }
+
