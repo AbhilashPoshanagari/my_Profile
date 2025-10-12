@@ -178,6 +178,24 @@
       "link": "https://abhilashposhanagari.github.io/MCP_client"
     }
   ],
+  "github_projects": [
+    {
+      "title": "Vulkan Basic Renderer",
+      "link": "https://github.com/AbhilashPoshanagari/vulkan_basics"
+    },
+    {
+      "title": "MCP server",
+      "link": "https://github.com/AbhilashPoshanagari/openAi_MCP_server"
+    },
+    {
+      "title": "Geo spacial AR core (Ionic plugin)",
+      "link": "https://github.com/AbhilashPoshanagari/kotlin_geo_spatial"
+    },
+    {
+      "title": "MCP client with open ai",
+      "link": "https://github.com/AbhilashPoshanagari/open_ai_mcp_client"
+    }
+  ],
   "education": [
     {
       "degree": "PG Certificate in Computational Data Science",
@@ -199,6 +217,7 @@
   "linkedin": "https://www.linkedin.com/in/abhilash-poshanagari-28a0a1123",
   "website": "https://AbhilashPoshanagari.github.io/my_Profile"
 }
+
 
 
 
