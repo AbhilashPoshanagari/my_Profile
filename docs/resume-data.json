@@ -21,7 +21,7 @@
         },
         {
           "name": "Python",
-          "rating": 3
+          "rating": 4
         },
       {
         "name": "C++",
@@ -42,11 +42,15 @@
         },
         {
           "name": "LLMs",
-          "rating": 3
+          "rating": 4
         },
+      {
+        "name": "MCP",
+        "rating": 4
+      },
         {
           "name":"NLP", 
-          "rating": 2      
+          "rating": 3
         }
     ]
   },
@@ -61,13 +65,17 @@
           "name": "Angular",
           "rating": 4
         },
+      {
+        "name": "React Native",
+        "rating": 3
+      },
         {
           "name": "NodeJs",
           "rating": 3
         },
         {
           "name": "FastAPI",
-          "rating": 3
+          "rating": 4
         }
     ]
   }
@@ -78,6 +86,12 @@
       "web_site": "https://www.trccompanies.com",
       "duriation": "2021 August - Present",
       "projects": [
+        {
+          "title":"Lemur (AI Companion app)",
+          "dateRange":"2025",
+          "description":"Lemur AI Companion is an intelligent support application designed to extend the capabilities of the Lemur Utility Management System, which manages geographical utility assets such as electrical, gas, and infrastructure networks. The companion app leverages OpenAI’s Large Language Model (LLM) to allow users to ask natural language questions about their assets. The LLM processes these queries, extracts key features, and connects to internal servers to deliver accurate, context-aware responses. Communication between Lemur and Lemur AI Companion is seamlessly handled via deeplinking, enabling smooth interaction between both applications.",
+          "technologies":["React Native", "Fast API"]
+        },
         {
           "title":"AG & P, Quality construction management (CR)",
           "dateRange":"2023",
@@ -217,6 +231,7 @@
   "linkedin": "https://www.linkedin.com/in/abhilash-poshanagari-28a0a1123",
   "website": "https://AbhilashPoshanagari.github.io/my_Profile"
 }
+
 
 
 
