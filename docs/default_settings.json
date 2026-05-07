@@ -10,7 +10,7 @@
         "resume_url": "resume-data.json",
         "download_resume": "abhi_Resume_2026_.pdf",
         "rename_rename": "Abhilash_Poshanagari.pdf",
-        "customSettingURL": "",
+        "customSettingURL": "https://raw.githubusercontent.com/AbhilashPoshanagari/Causal_Alpha/refs/heads/main/default_settings_21.json",
         "settings": true,
         "hasBackgroundImage": false,
         "toolbarBackgroundImage": "https://github.com/AbhilashPoshanagari/Causal_Alpha/blob/main/documents/20250524_185310.jpg",
