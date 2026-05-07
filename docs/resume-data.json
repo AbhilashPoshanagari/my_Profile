@@ -5,8 +5,8 @@
   "phone": "9494940326",
   "location": "Telangana, India",
   "profilePic": "profile_pic.jfif",
-  "tags": ["Ionic", "Angular", "ML", "Big data", "Neural Networks"],
-  "aboutme": "I am a passionate Data Scientist with over 4 years of experience in Angular and Ionic development, now transitioning into AI and Data Science. I recently completed a one-year Post Graduate program in AI and Data Science from IISc Bangalore and NSE TalentSprint, where I gained strong foundations in probability, statistics, linear algebra, and calculus, along with practical experience in machine learning, deep learning, generative AI, and scalable AI systems. My training also included data engineering with Apache Spark and business analytics. With a unique blend of software engineering expertise and data-driven problem-solving skills, I am eager to apply advanced analytics and AI techniques to real-world challenges and drive data-informed decision-making.",
+  "tags": ["GenAI", "Agentic AI", "Ionic", "Angular", "ML", "Big data", "Neural Networks"],
+  "aboutme": "I am a passionate Data Scientist and Software Engineer with over 6 years of experience in Angular and Ionic development, along with 2 years of hands-on experience in Python, Generative AI, and Model Context Protocol (MCP) based systems. I am currently transitioning into AI and Data Science, backed by a one-year Post Graduate program in AI and Data Science from Indian Institute of Science Bangalore and NSE TalentSprint, where I built strong foundations in probability, statistics, linear algebra, and calculus, along with practical experience in machine learning, deep learning, generative AI, and scalable AI systems. My experience includes building AI-powered applications using Python, LLMs, embeddings, vector databases, MCP architectures, and modern AI orchestration frameworks. I have also worked on scalable AI integrations, intelligent automation workflows, and data-driven application development",
   "skills": [ 
     {
     "category": "Programming Languages",
@@ -25,6 +25,10 @@
         },
       {
         "name": "C++",
+        "rating": 3
+      },
+      {
+        "name": "Kotlin",
         "rating": 3
       }
     ]
@@ -45,12 +49,16 @@
           "rating": 4
         },
       {
+        "name": "GenAI",
+        "rating": 4
+      }
+      {
         "name": "MCP",
         "rating": 4
       },
         {
           "name":"NLP", 
-          "rating": 3
+          "rating": 4
         }
     ]
   },
@@ -88,7 +96,7 @@
       "projects": [
         {
           "title":"Lemur (AI Companion app)",
-          "dateRange":"2025",
+          "dateRange":"2026",
           "description":"Lemur AI Companion is an intelligent support application designed to extend the capabilities of the Lemur Utility Management System, which manages geographical utility assets such as electrical, gas, and infrastructure networks. The companion app leverages OpenAI’s Large Language Model (LLM) to allow users to ask natural language questions about their assets. The LLM processes these queries, extracts key features, and connects to internal servers to deliver accurate, context-aware responses. Communication between Lemur and Lemur AI Companion is seamlessly handled via deeplinking, enabling smooth interaction between both applications.",
           "technologies":["React Native", "Fast API"]
         },
