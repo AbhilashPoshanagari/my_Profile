@@ -1,12 +1,12 @@
 {
   "name": "Abhilash Poshanagari",
   "title": "Software Engineer | Aspiring Data Scientist",
-  "email": "abhi.sree762@gmail.com",
+  "email": "abhilashposhanagari@gmail.com",
   "phone": "9494940326",
   "location": "Telangana, India",
   "profilePic": "profile_pic.jfif",
   "tags": ["GenAI", "Agentic AI", "Ionic", "Angular", "ML", "Big data", "Neural Networks"],
-  "aboutme": "I am a passionate Data Scientist and Software Engineer with over 6 years of experience in Angular and Ionic development, along with 2 years of hands-on experience in Python, Generative AI, and Model Context Protocol (MCP) based systems. I am currently transitioning into AI and Data Science, backed by a one-year Post Graduate program in AI and Data Science from Indian Institute of Science Bangalore and NSE TalentSprint, where I built strong foundations in probability, statistics, linear algebra, and calculus, along with practical experience in machine learning, deep learning, generative AI, and scalable AI systems. My experience includes building AI-powered applications using Python, LLMs, embeddings, vector databases, MCP architectures, and modern AI orchestration frameworks. I have also worked on scalable AI integrations, intelligent automation workflows, and data-driven application development",
+  "aboutme": "Software engineer with 6+ years building production web and mobile platforms (Angular, Ionic, React Native) for enterprise clients including Tata Power and Think Gas, now focused on applied ML and data engineering. Completed a postgraduate program in AI & Data Science at IISc Bangalore (probability, statistics, linear algebra, machine learning, deep learning, generative AI, Apache Spark). Hands-on with PySpark, scikit-learn, TensorFlow, LangChain/LangGraph, and MCP-based agentic systems. Combines a strong software-engineering foundation with a fast-growing, project-backed ML/data skill set",
   "skills": [ 
     {
     "category": "Programming Languages",
@@ -21,6 +21,10 @@
         },
         {
           "name": "Python",
+          "rating": 4
+        },
+       {
+          "name": "PySpark",
           "rating": 4
         },
       {
@@ -41,10 +45,6 @@
           "rating": 3
         },
         {
-          "name": "Neural Networks",
-          "rating": 3
-        },
-        {
           "name": "LLMs",
           "rating": 4
         },
@@ -56,6 +56,10 @@
         "name": "MCP",
         "rating": 4
       },
+      {
+          "name": "Langchain/Langgraph",
+          "rating": 3
+        },
         {
           "name":"NLP", 
           "rating": 4
