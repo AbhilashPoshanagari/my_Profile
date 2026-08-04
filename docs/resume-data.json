@@ -5,7 +5,7 @@
   "phone": "9494940326",
   "location": "Telangana, India",
   "profilePic": "profile_pic.jfif",
-  "tags": ["GenAI", "Agentic AI", "Ionic", "Angular", "ML", "Big data", "Neural Networks"],
+  "tags": ["GenAI", "Agentic AI", "ADK", "Langchain/Langgraph", "Ionic", "Angular", "ML", "Big data", "Neural Networks"],
   "aboutme": "Software engineer with 6+ years building production web and mobile platforms (Angular, Ionic, React Native) for enterprise clients including Tata Power and Think Gas, now focused on applied ML and data engineering. Completed a postgraduate program in AI & Data Science at IISc Bangalore (probability, statistics, linear algebra, machine learning, deep learning, generative AI, Apache Spark). Hands-on with PySpark, scikit-learn, TensorFlow, LangChain/LangGraph, and MCP-based agentic systems. Combines a strong software-engineering foundation with a fast-growing, project-backed ML/data skill set",
   "skills": [ 
     {
@@ -58,8 +58,12 @@
       },
       {
           "name": "Langchain/Langgraph",
-          "rating": 3
+          "rating": 4
         },
+      {
+        "name": "ADK",
+        "rating": 4
+      },
         {
           "name":"NLP", 
           "rating": 4
